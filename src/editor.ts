@@ -9,7 +9,6 @@ interface RadarrQueueCardConfig extends LovelaceCardConfig {
   show_fanart?: boolean;
   compact_mode?: boolean;
   refresh_interval?: number;
-  show_title?: boolean;
   show_count?: boolean;
   show_tracker?: boolean;
   show_download_client?: boolean;
@@ -157,7 +156,6 @@ export class RadarrQueueCardEditor extends HTMLElement {
       show_fanart: true,
       compact_mode: false,
       refresh_interval: 60,
-      show_title: false,
       show_count: false,
       show_tracker: true,
       show_download_client: true,
@@ -278,18 +276,6 @@ export class RadarrQueueCardEditor extends HTMLElement {
         <div class="config-section">
           <div class="config-section-title">Header Options</div>
 
-          <div class="config-row">
-            <div class="config-label">
-              <span class="config-label-text">Show Title</span>
-              <span class="config-label-description">Display card title</span>
-            </div>
-            <div class="config-input">
-              <label class="toggle-switch">
-                <input type="checkbox" id="show_title" ${this._config.show_title ? 'checked' : ''} />
-                <span class="toggle-slider"></span>
-              </label>
-            </div>
-          </div>
 
           <div class="config-row">
             <div class="config-label">
@@ -418,7 +404,6 @@ export class RadarrQueueCardEditor extends HTMLElement {
     const checkboxInputs = [
       'compact_mode',
       'show_fanart',
-      'show_title',
       'show_count',
       'show_refresh_button',
       'show_search',

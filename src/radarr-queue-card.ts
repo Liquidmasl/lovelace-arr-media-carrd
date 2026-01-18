@@ -511,10 +511,8 @@ class RadarrQueueCard extends HTMLElement implements LovelaceCard {
                 </button>
               ` : ''}
       </div>` : '<span></span>'}
-            <div class="header-right">
-              ${this._config.show_count ? `<span class="count">${this._items.length} item${this._items.length !== 1 ? 's' : ''}</span>` : ''}
-              ${refreshBtnHtml}
-            </div>
+            ${this._config.show_count ? `<span class="count">${this._items.length} item${this._items.length !== 1 ? 's' : ''}</span>` : ''}
+            ${refreshBtnHtml}
           </div>
         `;
       }

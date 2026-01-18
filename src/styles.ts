@@ -21,11 +21,11 @@ export const styles = `
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 16px;
     font-size: 1.2em;
     font-weight: 500;
     color: var(--primary-text-color);
     border-bottom: 1px solid var(--divider-color, rgba(255,255,255,0.1));
+    gap: 12px;
   }
 
   .card-header .title {
@@ -53,6 +53,7 @@ export const styles = `
     color: white;
     border-radius: 12px;
     font-weight: 600;
+    text-wrap: nowrap;
   }
 
   .refresh-btn {
@@ -78,10 +79,10 @@ export const styles = `
   }
 
   .search-container {
+    width: 100%;
     display: flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
     border-bottom: 1px solid var(--divider-color, rgba(255,255,255,0.1));
   }
 
@@ -98,7 +99,6 @@ export const styles = `
     outline: none;
     color: var(--primary-text-color);
     font-size: 0.95em;
-    padding: 8px 0;
     font-family: inherit;
   }
 
