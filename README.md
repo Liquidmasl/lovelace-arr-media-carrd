@@ -18,6 +18,11 @@ A custom Lovelace card for Home Assistant that displays your Radarr and Sonarr d
 - **Compact Mode**: Space-efficient layout for smaller displays
 - **Fully Configurable**: Toggle visibility of all UI elements
 
+## Requirements
+
+- Home Assistant **2026.3** or newer
+- [Radarr](https://www.home-assistant.io/integrations/radarr/) and/or [Sonarr](https://www.home-assistant.io/integrations/sonarr/) integration configured in Home Assistant
+
 ## Installation
 
 ### HACS (Recommended)

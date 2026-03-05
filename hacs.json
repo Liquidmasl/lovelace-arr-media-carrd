@@ -1,5 +1,6 @@
 {
   "name": "media-carrd",
   "render_readme": true,
-  "filename": "arr-media-card.js"
+  "filename": "arr-media-card.js",
+  "homeassistant": "2026.3.0"
 }
