@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "additionalDirectories": [
+      "c:\\Users\\marce\\repos\\lovelace-version-card"
+    ],
+    "allow": [
+      "Bash(gh repo:*)"
+    ]
+  }
+}

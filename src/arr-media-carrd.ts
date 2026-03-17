@@ -925,7 +925,7 @@ if (!customElements.get('arr-media-card')) {
 });
 
 console.info(
-  '%c ARR-MEDIA-CARD %c v__VERSION__ ',
+  '%c ARR-MEDIA-CARRD %c v__VERSION__ ',
   'color: white; background: #ff6600; font-weight: bold;',
   'color: #ff6600; background: white; font-weight: bold;'
 );
