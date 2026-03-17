@@ -46,4 +46,4 @@ jobs:
         uses: softprops/action-gh-release@v2
         with:
           body_path: /tmp/release_notes.md
-          files: dist/arr-media-card.js
+          files: dist/arr-media-carrd.js

@@ -494,4 +494,4 @@ export class RadarrQueueCardEditor extends HTMLElement {
   }
 }
 
-customElements.define('arr-media-card-editor', RadarrQueueCardEditor);
+customElements.define('arr-media-carrd-editor', RadarrQueueCardEditor);

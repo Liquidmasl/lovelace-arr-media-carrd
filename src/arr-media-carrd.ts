@@ -118,7 +118,7 @@ class RadarrQueueCard extends HTMLElement implements LovelaceCard {
   private _expandedSeasons = new Map<number, Set<number>>();
 
   static getConfigElement() {
-    return document.createElement('arr-media-card-editor');
+    return document.createElement('arr-media-carrd-editor');
   }
 
   static getStubConfig() {
@@ -899,12 +899,27 @@ class RadarrQueueCard extends HTMLElement implements LovelaceCard {
   }
 }
 
-customElements.define('arr-media-card', RadarrQueueCard);
+customElements.define('arr-media-carrd', RadarrQueueCard);
+
+// Deprecated alias — kept for backward compatibility, will be removed in a future major version
+if (!customElements.get('arr-media-card')) {
+  customElements.define('arr-media-card', class extends RadarrQueueCard {
+    connectedCallback() {
+      super.connectedCallback();
+      console.warn(
+        '[arr-media-carrd] ⚠️ Ahoy! You\'re using "arr-media-card" (one r) — the old name.\n' +
+        'Yes, we added an extra "r". Yes, it\'s intentional. Yes, it\'s a pirate thing.\n' +
+        'Please update your dashboard config: "arr-media-card" → "arr-media-carrd" (spot the extra r before the d).\n' +
+        'The old name will walk the plank in a future major version.'
+      );
+    }
+  });
+}
 
 (window as any).customCards = (window as any).customCards || [];
 (window as any).customCards.push({
-  type: 'arr-media-card',
-  name: 'Arr Media Card',
+  type: 'arr-media-carrd',
+  name: 'Arr Media Carrd',
   description: 'Display your Radarr/Sonarr download queue or library',
   preview: true,
 });

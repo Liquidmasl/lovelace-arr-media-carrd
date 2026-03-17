@@ -1,8 +1,8 @@
 # Arr Queue Card
 
-![Version](https://img.shields.io/github/v/release/Liquidmasl/homeassistant-arr-queue-card)
-![Downloads](https://img.shields.io/github/downloads/Liquidmasl/homeassistant-arr-queue-card/total)
-![Stars](https://img.shields.io/github/stars/Liquidmasl/homeassistant-arr-queue-card)
+![Version](https://img.shields.io/github/v/release/Liquidmasl/lovelace-arr-media-carrd)
+![Downloads](https://img.shields.io/github/downloads/Liquidmasl/lovelace-arr-media-carrd/total)
+![Stars](https://img.shields.io/github/stars/Liquidmasl/lovelace-arr-media-carrd)
 ![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)
 
 A custom Lovelace card for Home Assistant that displays your Radarr and Sonarr download queues and libraries in a beautiful, modern interface.
@@ -41,12 +41,12 @@ A custom Lovelace card for Home Assistant that displays your Radarr and Sonarr d
 
 ### Manual Installation
 
-1. Download `arr-media-card.js` from the [latest release](../../releases)
+1. Download `arr-media-carrd.js` from the [latest release](../../releases)
 2. Copy it to your `config/www` folder
 3. Add the resource in Home Assistant:
    - Go to **Settings** → **Dashboards** → **⋮ menu** (top right) → **Resources**
    - Click **Add Resource**
-   - URL: `/local/arr-media-card.js`
+   - URL: `/local/arr-media-carrd.js`
    - Type: **JavaScript Module**
 
 ## Configuration
@@ -162,7 +162,7 @@ npm run build
 npm run watch
 ```
 
-The built file will be in `dist/arr-media-card.js`.
+The built file will be in `dist/arr-media-carrd.js`.
 
 ## License
 

@@ -7,9 +7,9 @@ const require = createRequire(import.meta.url);
 const { version } = require('./package.json');
 
 export default {
-  input: 'src/arr-media-card.ts',
+  input: 'src/arr-media-carrd.ts',
   output: {
-    file: 'dist/arr-media-card.js',
+    file: 'dist/arr-media-carrd.js',
     format: 'es',
     sourcemap: false,
   },

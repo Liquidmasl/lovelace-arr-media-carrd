@@ -2,6 +2,25 @@
 
 ## [Unreleased]
 
+The card has been renamed to `arr-media-carrd` (yes, two r's — we're leaning into the arr thing). This is required to get the card listed in the HACS default store, where the JS filename must match the repository name. Sorry about that.
+
+**Action needed if you installed manually:** update your resource URL from `arr-media-card.js` to `arr-media-carrd.js` and your dashboard type from `arr-media-card` to `arr-media-carrd`.
+
+**HACS users:** just hit update, HACS handles the file automatically. However, please also update your custom repository URL from `Liquidmasl/homeassistant-arr-queue-card` to `Liquidmasl/lovelace-arr-media-carrd` — GitHub redirects the old URL for now, but that won't last forever.
+
+The old element type `arr-media-card` still works for now and will print a deprecation warning in the browser console so you don't miss it. It will be removed in a future major version.
+
+<details>
+<summary>Changes</summary>
+
+- Repository renamed from `homeassistant-arr-queue-card` to `lovelace-arr-media-carrd`
+- JS file renamed from `arr-media-card.js` to `arr-media-carrd.js`
+- Primary element type is now `arr-media-carrd` (note the extra r before the d)
+- Old element type `arr-media-card` kept as a deprecated alias with a console warning
+- Editor element renamed to `arr-media-carrd-editor` internally
+
+</details>
+
 ## [1.3.1]
 
 - Search bar can now be hidden via the card editor. 
