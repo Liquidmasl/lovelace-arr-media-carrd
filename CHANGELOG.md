@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.3.3]
+
 ## [1.3.2]
 
 The card has been renamed to `arr-media-carrd` (yes, two r's — we're leaning into the arr thing). This is required to get the card listed in the HACS default store, where the JS filename must match the repository name. Sorry about that.
