@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.3.1]
+
 - Search bar can now be hidden via the card editor. 
 - Releasing is now fully automated via `npm version`.
 
