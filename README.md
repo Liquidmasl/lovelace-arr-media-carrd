@@ -1,5 +1,10 @@
 # Arr Queue Card
 
+![Version](https://img.shields.io/github/v/release/Liquidmasl/homeassistant-arr-queue-card)
+![Downloads](https://img.shields.io/github/downloads/Liquidmasl/homeassistant-arr-queue-card/total)
+![Stars](https://img.shields.io/github/stars/Liquidmasl/homeassistant-arr-queue-card)
+![HACS](https://img.shields.io/badge/HACS-Custom-41BDF5.svg)
+
 A custom Lovelace card for Home Assistant that displays your Radarr and Sonarr download queues and libraries in a beautiful, modern interface.
 
 | Queue Mode | Library Mode |
