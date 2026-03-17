@@ -17,6 +17,7 @@ interface ArrQueueCardConfig extends LovelaceCardConfig {
   show_tracker?: boolean;
   show_download_client?: boolean;
   show_refresh_button?: boolean;
+  show_search?: boolean;
 }
 
 interface ConfigEntry {
@@ -340,6 +341,19 @@ export class RadarrQueueCardEditor extends HTMLElement {
 
           <div class="config-row">
             <div class="config-label">
+              <span class="config-label-text">Show Search Bar</span>
+              <span class="config-label-description">Display the search input in the header</span>
+            </div>
+            <div class="config-input">
+              <label class="toggle-switch">
+                <input type="checkbox" id="show_search" ${this._config.show_search !== false ? 'checked' : ''} />
+                <span class="toggle-slider"></span>
+              </label>
+            </div>
+          </div>
+
+          <div class="config-row">
+            <div class="config-label">
               <span class="config-label-text">Show Count</span>
               <span class="config-label-description">Display item count badge</span>
             </div>
@@ -442,6 +456,7 @@ export class RadarrQueueCardEditor extends HTMLElement {
     const checkboxInputs = [
       'compact_mode',
       'show_fanart',
+      'show_search',
       'show_count',
       'show_refresh_button',
       'show_tracker',

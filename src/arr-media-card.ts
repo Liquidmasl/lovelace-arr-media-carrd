@@ -19,6 +19,7 @@ interface ArrQueueCardConfig extends LovelaceCardConfig {
   show_tracker?: boolean;
   show_download_client?: boolean;
   show_refresh_button?: boolean;
+  show_search?: boolean;
 }
 
 interface QueueItem {
@@ -615,10 +616,12 @@ class RadarrQueueCard extends HTMLElement implements LovelaceCard {
       ? `<button class="refresh-btn ${this._loading ? 'loading' : ''}" title="Refresh"><ha-icon icon="mdi:refresh"></ha-icon></button>`
       : '';
 
+    const showSearch = this._config.show_search !== false;
     const hasActions = this._config.show_count || this._config.show_refresh_button;
 
-    return `
-      <div class="card-header">
+    if (!showSearch && !hasActions) return '';
+
+    const searchHtml = showSearch ? `
         <div class="search-container">
           <ha-icon icon="mdi:magnify" class="search-icon"></ha-icon>
           <input type="text" class="search-input" placeholder="Search..." value="${this._searchQuery}" ${disabled ? 'disabled' : ''} />
@@ -627,7 +630,11 @@ class RadarrQueueCard extends HTMLElement implements LovelaceCard {
               <ha-icon icon="mdi:close"></ha-icon>
             </button>
           ` : ''}
-        </div>
+        </div>` : '';
+
+    return `
+      <div class="card-header">
+        ${searchHtml}
         ${hasActions ? `
           <div class="header-actions">
             ${countHtml}

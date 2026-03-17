@@ -2,10 +2,8 @@ name: Release
 
 on:
   push:
-    branches:
-      - main
-    paths:
-      - package.json
+    tags:
+      - "v*"
 
 jobs:
   release:
@@ -15,42 +13,23 @@ jobs:
 
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Get version from package.json
-        id: version
-        run: echo "version=v$(node -p "require('./package.json').version")" >> $GITHUB_OUTPUT
-
-      - name: Check if tag already exists
-        id: tag_check
-        run: |
-          if git rev-parse "${{ steps.version.outputs.version }}" >/dev/null 2>&1; then
-            echo "exists=true" >> $GITHUB_OUTPUT
-          else
-            echo "exists=false" >> $GITHUB_OUTPUT
-          fi
 
       - name: Set up Node.js
-        if: steps.tag_check.outputs.exists == 'false'
         uses: actions/setup-node@v4
         with:
           node-version: "20"
           cache: "npm"
 
       - name: Install dependencies
-        if: steps.tag_check.outputs.exists == 'false'
         run: npm ci
 
       - name: Build
-        if: steps.tag_check.outputs.exists == 'false'
         run: npm run build
 
       - name: Extract changelog section
-        if: steps.tag_check.outputs.exists == 'false'
         id: changelog
         run: |
-          VERSION="${{ steps.version.outputs.version }}"
+          VERSION="${{ github.ref_name }}"
           # Strip leading 'v' to match CHANGELOG headings like [1.2.0]
           VER="${VERSION#v}"
           awk "/^## \[${VER}\]/{found=1; next} found && /^## \[/{exit} found{print}" CHANGELOG.md > /tmp/release_notes.md
@@ -59,9 +38,7 @@ jobs:
           fi
 
       - name: Create release
-        if: steps.tag_check.outputs.exists == 'false'
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: ${{ steps.version.outputs.version }}
           body_path: /tmp/release_notes.md
           files: dist/arr-media-card.js

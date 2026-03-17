@@ -1,5 +1,19 @@
 # Changelog
 
+## [Unreleased]
+
+Search bar can now be hidden via the card editor.
+
+<details>
+<summary>Changes</summary>
+
+- Added toggle in Header Options to show/hide the search bar
+- Header is now fully hidden when all header elements are disabled
+- Versioning switched to `npm version` for atomic package.json + lock file bumps
+- Added CLAUDE.md documenting the release process
+
+</details>
+
 ## [1.1.0]
 
 Sonarr library mode: browse your full series library with expandable episodes grouped by season, including availability counts per season. Also fixes several bugs when running Radarr and Sonarr side by side.
