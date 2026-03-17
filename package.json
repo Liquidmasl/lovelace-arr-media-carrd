@@ -8,8 +8,8 @@
     "build": "rollup -c",
     "watch": "rollup -c --watch",
     "lint": "eslint src/**/*.ts",
-    "prepare": "npm run build"
-  },
+    "prepare": "npm run build",
+    "version": "node -e \"const fs=require('fs');const v=process.env.npm_package_version;const c=fs.readFileSync('CHANGELOG.md','utf8');fs.writeFileSync('CHANGELOG.md',c.replace('## [Unreleased]','## [Unreleased]\\n\\n## ['+v+']'));\" && git add CHANGELOG.md"  },
   "keywords": [
     "home-assistant",
     "lovelace",

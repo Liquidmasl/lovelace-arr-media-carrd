@@ -1,5 +1,17 @@
 # Changelog
 
+## [Unreleased]
+
+- Search bar can now be hidden via the card editor. 
+- Releasing is now fully automated via `npm version`.
+
+<details>
+<summary>Changes</summary>
+
+- Automated changelog versioning: `npm version` now renames `[Unreleased]` to the new version and creates a fresh `[Unreleased]` header automatically
+
+</details>
+
 ## [1.3.0]
 
 Search bar can now be hidden via the card editor.

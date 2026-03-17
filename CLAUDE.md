@@ -18,4 +18,11 @@ git push --follow-tags
 
 Pushing the tag triggers the release workflow (`.github/workflows/release.yml`), which builds the card and publishes a GitHub release with the changelog section for that version.
 
-Before releasing, move the `[Unreleased]` section in `CHANGELOG.md` to the new version number.
+### Release checklist
+
+1. Add changes under `## [Unreleased]` in `CHANGELOG.md` as you work
+2. Run `npm version patch/minor/major`
+   - automatically renames `[Unreleased]` to the new version and stages it into the version commit
+3. `git push --follow-tags`
+
+That's it — the changelog rename is handled automatically and is always included in the tagged commit.
