@@ -1,6 +1,6 @@
 {
   "name": "media-carrd",
-  "version": "1.3.1",
+  "version": "1.3.2",
   "type": "module",
   "description": "A custom Lovelace card for Home Assistant to display Radarr and Sonarr queues and libraries",
   "main": "dist/arr-media-card.js",
