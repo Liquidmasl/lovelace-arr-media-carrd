@@ -26,11 +26,6 @@ jobs:
       - name: Build
         run: npm run build
 
-      - name: HACS validation
-        uses: hacs/action@22.5.0
-        with:
-          category: plugin
-
       - name: Extract changelog section
         id: changelog
         run: |
@@ -47,3 +42,8 @@ jobs:
         with:
           body_path: /tmp/release_notes.md
           files: dist/arr-media-carrd.js
+
+      - name: HACS validation
+        uses: hacs/action@22.5.0
+        with:
+          category: plugin
