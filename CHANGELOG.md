@@ -2,6 +2,8 @@
 
 ## [Unreleased]
 
+## [1.4.0]
+
 ### Changed
 - Media counter badge now uses HA secondary text color (`--secondary-text-color`) instead of fixed orange, and is slightly smaller
 
