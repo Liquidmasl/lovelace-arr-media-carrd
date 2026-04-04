@@ -87,10 +87,10 @@ export const styles = `
   }
 
   .count {
-    font-size: 0.75em;
-    padding: 4px 10px;
-    background: var(--arr-primary);
-    color: white;
+    font-size: 0.65em;
+    padding: 3px 8px;
+    background: var(--secondary-text-color);
+    color: var(--card-background-color, var(--ha-card-background, #1c1c1c));
     border-radius: 12px;
     font-weight: 600;
     white-space: nowrap;
