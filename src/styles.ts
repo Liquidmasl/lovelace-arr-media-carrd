@@ -87,10 +87,11 @@ export const styles = `
   }
 
   .count {
-    font-size: 0.75em;
-    padding: 4px 10px;
-    background: var(--arr-primary);
-    color: white;
+    font-size: 0.65em;
+    padding: 3px 8px;
+    background: transparent;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
     border-radius: 12px;
     font-weight: 600;
     white-space: nowrap;
