@@ -89,8 +89,9 @@ export const styles = `
   .count {
     font-size: 0.65em;
     padding: 3px 8px;
-    background: var(--secondary-text-color);
-    color: var(--card-background-color, var(--ha-card-background, #1c1c1c));
+    background: transparent;
+    color: var(--secondary-text-color);
+    border: 1px solid var(--secondary-text-color);
     border-radius: 12px;
     font-weight: 600;
     white-space: nowrap;
